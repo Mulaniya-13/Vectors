@@ -1,32 +1,39 @@
 #include<iostream>
 using namespace std;
 
-void func(){
-    int arr[100]={1,2,3,4,5};
-    for(int i=0;i<5;i++){
-        cout<<arr[i]<<" ";
+void funcInt(){
+    int *ptr=new int;
+    *ptr=5;
+    
+    cout<<*ptr;
+
+    delete ptr;
+}
+
+void funcArr(){
+    
+    int size;
+    cin>>size;
+    
+    int *ptr=new int[size];
+
+    int x=1;
+    for(int i=0;i<size;i++){
+        ptr[i]=x;
+        cout<<ptr[i]<<" ";
+        x++;
     }
-    return;
+    cout<<endl;
+
+    delete [] ptr; //free
 }
 
 int main(){
 
-    func();
-    cout<<arr[0]<<endl; //Error
+    funcInt();
     
-    // int arr[100]={1,2,3,4,5};
-    // int size;
-    // cin>>size;
-    
-    // int *arr=new int[size];
 
-    // int x=1;
-    // for(int i=0;i<size;i++){
-    //     arr[i]=x;
-    //     cout<<arr[i]<<" ";
-    //     x++;
-    // }
-    // cout<<endl;
+    
 
     return 0;
 }
