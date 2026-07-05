@@ -11,5 +11,6 @@ int * func(){
 int main(){
     int *x=func();
     cout<<*x<<endl;
+    //delete x; //free the memory allocated in func
     return 0;
 }
