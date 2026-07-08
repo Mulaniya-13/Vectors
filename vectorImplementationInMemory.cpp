@@ -13,6 +13,6 @@ int main(){
 
     vec.pop_back();
     cout<<"Size : "<<vec.size()<<endl; //4
-    cout<<"Capacity : "<<vec.capacity()<<endl; //capacity remains the same, it doesn't change
+    cout<<"Capacity : "<<vec.capacity()<<endl; //capacity remains the same, it doesn't change once initialized once and it didn't fall short
     return 0;
 }
